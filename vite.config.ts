@@ -1,9 +1,14 @@
 import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { expressDevServer } from "remix-express-dev-server";
 
 export default defineConfig({
+  build: {
+    target: "esnext",
+  },
   plugins: [
+    expressDevServer(),
     remix({
       future: {
         v3_fetcherPersist: true,
@@ -13,4 +18,7 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  server: {
+    port: 3000,
+  },
 });

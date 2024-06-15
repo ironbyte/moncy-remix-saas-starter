@@ -2,10 +2,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "**/.server/**/*.ts",
-    "**/.server/**/*.tsx",
-    "**/.client/**/*.ts",
-    "**/.client/**/*.tsx"
+    "env.d.ts"
   ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
@@ -18,6 +15,7 @@
     "resolveJsonModule": true,
     "target": "ES2022",
     "strict": true,
+    "noImplicitAny": true,
     "allowJs": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -25,6 +23,8 @@
     "paths": {
       "~/*": ["./app/*"]
     },
+    "allowImportingTsExtensions": true,
+    "noUncheckedIndexedAccess": true,
 
     // Vite takes care of building everything, not tsc.
     "noEmit": true
