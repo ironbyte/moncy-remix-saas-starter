@@ -7,20 +7,20 @@ const config = {
   printWidth: 80,
   tabWidth: 2,
   plugins: [
-    '@ianvs/prettier-plugin-sort-imports',
-    'prettier-plugin-tailwindcss',
+    "@ianvs/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss",
   ],
   importOrder: [
-    '^(react/(.*)$)|^(react$)',
-    '^(remix/(.*)$)|^(remix$)',
-    '<THIRD_PARTY_MODULES>',
-    '',
-    '^~/utils/(.*)$',
-    '^~/services/(.*)$',
-    '^~/(.*)$',
-    '^[./]',
+    "^(react/(.*)$)|^(react$)",
+    "^(remix/(.*)$)|^(remix$)",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "^~/utils/(.*)$",
+    "^~/services/(.*)$",
+    "^~/(.*)$",
+    "^[./]",
   ],
-  importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
-}
+  importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
+};
 
-export default config
+export default config;
