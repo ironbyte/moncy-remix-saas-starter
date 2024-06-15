@@ -1,4 +1,5 @@
 import { vitePlugin as remix } from "@remix-run/dev";
+import { remixDevTools } from "remix-development-tools";
 import { expressDevServer } from "remix-express-dev-server";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -9,6 +10,7 @@ export default defineConfig({
   },
   plugins: [
     expressDevServer(),
+    remixDevTools(),
     remix({
       future: {
         v3_fetcherPersist: true,
