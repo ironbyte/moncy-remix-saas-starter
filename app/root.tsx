@@ -9,6 +9,8 @@ import {
 import "./tailwind.css";
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const theme = "dark";
+
   return (
     <html lang="en">
       <head>
@@ -17,7 +19,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-background dark h-full min-h-screen w-full">
+      <body className={`${theme} h-full min-h-screen w-full bg-background`}>
         {children}
         <ScrollRestoration />
         <Scripts />
