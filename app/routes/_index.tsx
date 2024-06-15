@@ -3,8 +3,6 @@ import type { MetaFunction } from "@remix-run/node";
 import { Button } from "~/components/ui/button";
 
 export const meta: MetaFunction = () => {
-  console.log("process.env: ", process.env);
-
   return [
     { title: "New Remix App" },
     { name: "description", content: "Welcome to Remix!" },
