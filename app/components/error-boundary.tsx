@@ -1,6 +1,6 @@
 import { isRouteErrorResponse, useRouteError } from "@remix-run/react";
 
-export default function DefaultErrorBoundary() {
+export function DefaultErrorBoundary() {
   const error = useRouteError();
 
   if (isRouteErrorResponse(error)) {

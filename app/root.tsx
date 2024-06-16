@@ -13,8 +13,7 @@ import "./font.css";
 
 import { json, type LoaderFunctionArgs } from "@remix-run/node";
 
-import { Button } from "~/components/ui/button";
-import DefaultErrorBoundary from "~/components/ui/error-boundary";
+import { DefaultErrorBoundary } from "./components/error-boundary";
 
 export function loader({ request }: LoaderFunctionArgs) {
   const user = {};
@@ -51,22 +50,61 @@ export default function App() {
 
   return (
     <div className="relative flex min-h-screen flex-col">
-      <header className="container py-6">
-        <nav className="flex flex-wrap items-center justify-between gap-4 sm:flex-nowrap md:gap-8">
-          <span>LOGO</span>
-          <div className="flex items-center gap-10">
-            <Button asChild>
-              <Link to="/sign-in">Sign in</Link>
-            </Button>
-          </div>
-        </nav>
+      <header className="h-14 border-b">
+        <div className="container flex h-full items-center px-4 lg:px-6">
+          <Link className="flex items-center justify-center" to="/">
+            <span className="sr-only">Kyros Labs</span>
+            <span className="font-black">Kyros Labs</span>
+          </Link>
+          <nav className="ml-auto flex gap-4 sm:gap-6">
+            <Link
+              className="font-medium underline-offset-4 hover:underline"
+              to="/features"
+            >
+              Features
+            </Link>
+            <Link
+              className="font-medium underline-offset-4 hover:underline"
+              to="/pricing"
+            >
+              Pricing
+            </Link>
+            <Link
+              className="font-medium underline-offset-4 hover:underline"
+              to="/contact"
+            >
+              Contact
+            </Link>
+            <Link
+              className="font-medium underline-offset-4 hover:underline"
+              to="/sign-in"
+            >
+              Sign in
+            </Link>
+          </nav>
+        </div>
       </header>
       <div className="flex-1">
         <Outlet />
       </div>
-      <div className="container flex justify-between pb-5">
-        <span>FOOTER</span>
-      </div>
+      <footer className="border-t">
+        <div className="container flex w-full shrink-0 flex-col items-center gap-2 px-4 py-6 sm:flex-row md:px-6">
+          <p className="text-sm text-gray-500 dark:text-gray-200">
+            © 2024 Kyros Labs. All rights reserved.
+          </p>
+          <nav className="flex gap-4 sm:ml-auto sm:gap-6">
+            <Link className="text-sm underline-offset-4 hover:underline" to="#">
+              Pricing
+            </Link>
+            <Link className="text-sm underline-offset-4 hover:underline" to="#">
+              Docs
+            </Link>
+            <Link className="text-sm underline-offset-4 hover:underline" to="#">
+              Contact
+            </Link>
+          </nav>
+        </div>
+      </footer>
     </div>
   );
 }
