@@ -51,7 +51,7 @@ export default function App() {
 
   return (
     <div className="relative flex min-h-screen flex-col">
-      <header className="container border-b bg-slate-500 py-6">
+      <header className="container py-6">
         <nav className="flex flex-wrap items-center justify-between gap-4 sm:flex-nowrap md:gap-8">
           <span>LOGO</span>
           <div className="flex items-center gap-10">
@@ -64,7 +64,7 @@ export default function App() {
       <div className="flex-1">
         <Outlet />
       </div>
-      <div className="container flex justify-between border-t bg-slate-500 pb-5">
+      <div className="container flex justify-between pb-5">
         <span>FOOTER</span>
       </div>
     </div>
