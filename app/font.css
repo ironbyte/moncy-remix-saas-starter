@@ -1,0 +1,7 @@
+@font-face {
+  font-display: optional;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 200 1000;
+  src: url("/fonts/nunito-sans/nunito-sans-vf.woff2") format("woff2");
+}

@@ -4,6 +4,8 @@
 
 @layer base {
   :root {
+    --font-sans: Nunito Sans;
+
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -52,8 +54,5 @@
 @layer base {
   * {
     @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }
