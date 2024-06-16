@@ -93,9 +93,6 @@ importers:
       compression:
         specifier: ^1.7.4
         version: 1.7.4
-      dotenv:
-        specifier: ^16.4.5
-        version: 16.4.5
       drizzle-kit:
         specifier: ^0.22.7
         version: 0.22.7

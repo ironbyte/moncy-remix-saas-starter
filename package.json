@@ -10,9 +10,10 @@
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "format": "prettier --write .",
     "typecheck": "tsc",
-    "drizzle:check": " drizzle-kit check",
-    "drizzle:generate": " drizzle-kit generate",
-    "drizzle:migrate": " tsx ./drizzle/migrate.ts",
+    "drizzle:check": "drizzle-kit check",
+    "drizzle:generate": "drizzle-kit generate",
+    "drizzle:push": "drizzle-kit push",
+    "drizzle:migrate": "drizzle-kit migrate",
     "clean": "pnpm rimraf build"
   },
   "dependencies": {
@@ -46,7 +47,6 @@
     "@typescript-eslint/parser": "^6.7.4",
     "autoprefixer": "^10.4.19",
     "compression": "^1.7.4",
-    "dotenv": "^16.4.5",
     "drizzle-kit": "^0.22.7",
     "eslint": "^8.38.0",
     "eslint-import-resolver-typescript": "^3.6.1",
