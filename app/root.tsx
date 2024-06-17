@@ -11,9 +11,11 @@ import {
 import "./tailwind.css";
 import "./font.css";
 
+import { useState } from "react";
 import { json, type LoaderFunctionArgs } from "@remix-run/node";
 
 import { DefaultErrorBoundary } from "./components/error-boundary";
+import { MobileNav } from "./components/mobile-nav";
 
 export function loader({ request }: LoaderFunctionArgs) {
   const user = {};
@@ -47,6 +49,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const data = useLoaderData<typeof loader>();
+  const [isOpen, setIsOpen] = useState(true);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div className="relative flex min-h-screen flex-col">
@@ -56,31 +63,35 @@ export default function App() {
             <span className="sr-only">Kyros Labs</span>
             <span className="font-black">Kyros Labs</span>
           </Link>
-          <nav className="ml-auto flex gap-4 sm:gap-6">
-            <Link
-              className="font-medium underline-offset-4 hover:underline"
-              to="/features"
-            >
-              Features
-            </Link>
-            <Link
-              className="font-medium underline-offset-4 hover:underline"
-              to="/pricing"
-            >
-              Pricing
-            </Link>
-            <Link
-              className="font-medium underline-offset-4 hover:underline"
-              to="/contact"
-            >
-              Contact
-            </Link>
-            <Link
-              className="font-medium underline-offset-4 hover:underline"
-              to="/sign-in"
-            >
-              Sign in
-            </Link>
+
+          <nav className="ml-auto gap-4 sm:flex">
+            <MobileNav />
+            <div className="hidden sm:flex">
+              <Link
+                className="font-medium underline-offset-4 hover:underline"
+                to="/features"
+              >
+                Features
+              </Link>
+              <Link
+                className="font-medium underline-offset-4 hover:underline"
+                to="/pricing"
+              >
+                Pricing
+              </Link>
+              <Link
+                className="font-medium underline-offset-4 hover:underline"
+                to="/contact"
+              >
+                Contact
+              </Link>
+              <Link
+                className="font-medium underline-offset-4 hover:underline"
+                to="/sign-in"
+              >
+                Sign in
+              </Link>
+            </div>
           </nav>
         </div>
       </header>
