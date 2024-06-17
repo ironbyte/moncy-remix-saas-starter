@@ -8,6 +8,7 @@ export const env = createEnv({
     PUBLIC_APP_URL: z.string().url(),
     PUBLIC_DOMAIN: z.string().min(1),
     SUPABASE_ANON_KEY: z.string().min(1),
+    SUPABASE_URL: z.string().min(1),
   },
   runtimeEnv: process.env,
 });
