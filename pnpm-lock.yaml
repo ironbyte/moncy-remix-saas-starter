@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@conform-to/react':
+        specifier: ^1.1.4
+        version: 1.1.4(react@18.3.1)
+      '@conform-to/zod':
+        specifier: ^1.1.4
+        version: 1.1.4(zod@3.23.8)
       '@radix-ui/react-slot':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@18.3.3)(react@18.3.1)
@@ -32,6 +38,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      compression:
+        specifier: ^1.7.4
+        version: 1.7.4
       drizzle-orm:
         specifier: ^0.31.2
         version: 0.31.2(@types/react@18.3.3)(postgres@3.4.4)(react@18.3.1)
@@ -90,9 +99,6 @@ importers:
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.38)
-      compression:
-        specifier: ^1.7.4
-        version: 1.7.4
       drizzle-kit:
         specifier: ^0.22.7
         version: 0.22.7
@@ -319,6 +325,19 @@ packages:
   '@babel/types@7.24.7':
     resolution: {integrity: sha512-XEFXSlxiG5td2EJRe8vOmRbaXVgfcBlszKujvVmWIK/UpywWljQCfzAv3RQCGujWQ1RD4YYWEAqDXfuJiy8f5Q==}
     engines: {node: '>=6.9.0'}
+
+  '@conform-to/dom@1.1.4':
+    resolution: {integrity: sha512-NE763YdEs5nyiM3vBvC7c1mqyeTKRXRFsgS8Fni8DGvRwmbbLzgyF1jTwEmP5B8W0XXIvIPEPogyrm2LyVTFKQ==}
+
+  '@conform-to/react@1.1.4':
+    resolution: {integrity: sha512-RQSat9xnrfu4W/xja9acMSKt/vJWwn2kwec6EausUTkG2WJeuKTcEaEdqA4VZH3PtEK2kK1y/OXzJQGUPwgweQ==}
+    peerDependencies:
+      react: '>=18'
+
+  '@conform-to/zod@1.1.4':
+    resolution: {integrity: sha512-YqV9wgDbePR++uvhGVWUgn+Ae3G7vcAgoSaSGo87MJTs5Eb6IRvBiQh8x6GghWtr+BUylFAEF7MhN/cejwDlGg==}
+    peerDependencies:
+      zod: ^3.21.0
 
   '@emotion/babel-plugin@11.11.0':
     resolution: {integrity: sha512-m4HEDZleaaCH+XgDDsPF15Ht6wTLsgDTeR3WYj9Q/k76JtWhrJjcP4+/XlG8LGT/Rol9qUfOIztXeA84ATpqPQ==}
@@ -4935,6 +4954,18 @@ snapshots:
       '@babel/helper-string-parser': 7.24.7
       '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
+
+  '@conform-to/dom@1.1.4': {}
+
+  '@conform-to/react@1.1.4(react@18.3.1)':
+    dependencies:
+      '@conform-to/dom': 1.1.4
+      react: 18.3.1
+
+  '@conform-to/zod@1.1.4(zod@3.23.8)':
+    dependencies:
+      '@conform-to/dom': 1.1.4
+      zod: 3.23.8
 
   '@emotion/babel-plugin@11.11.0':
     dependencies:
