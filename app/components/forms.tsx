@@ -168,7 +168,7 @@ export function CheckboxField({
 
   return (
     <div className={className}>
-      <div className="flex gap-2">
+      <div className="flex items-center gap-2">
         <Checkbox
           {...checkboxProps}
           id={id}
@@ -192,7 +192,7 @@ export function CheckboxField({
         <label
           htmlFor={id}
           {...labelProps}
-          className="text-body-xs self-center text-muted-foreground"
+          className="text-body-xs self-center"
         />
       </div>
       <div className="px-4 pb-3 pt-1">
